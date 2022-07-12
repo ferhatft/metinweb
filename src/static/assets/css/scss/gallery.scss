@@ -1,0 +1,78 @@
+.galleryPage{
+    .row{
+        @media screen and (max-width: $maxWidth_md){
+            flex-direction: column-reverse;
+        }
+    }
+    .galleryList{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: -15px 0 0 0;
+        @media screen and (max-width: $maxWidth_md){
+            margin: 0 0 35px 0;
+        }
+        @media screen and (max-width: $maxWidth_xs){
+            flex-direction: column;
+        }
+        .gallery{
+            width: 24%;
+            height: 215px;
+            background: $white_100;
+            position: relative;
+            transition: all .2s ease-in-out;
+            margin: 15px 0 0 0;
+            border-radius: $radius_8;
+            cursor: pointer;
+            @media screen and (max-width: $maxWidth_md){
+                width: 49%;
+                margin: 0 0 15px 0;
+            }
+            @media screen and (max-width: $maxWidth_xs){
+                width: 100%;
+            }
+            &.blur{
+                &::after{
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: url("../image/icons/big-size.svg");
+                    background-repeat: no-repeat !important;
+                    background-size: 45px !important;
+                    background-position: center !important;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    transition: all .2s ease-in-out;
+                }
+                &::before{
+                    border-radius: $radius_8;
+                    background: rgba(130, 193, 78, .8);
+                    opacity: 0;
+                }
+                &:hover{
+                    &::before, &::after{
+                        opacity: 1;
+                    }
+                }
+            }
+            .imgContent{
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                border-radius: $radius_8;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: $radius_8;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,48 @@
+<div class="col-lg-3">
+    <div class="subMenu">
+        {% with request.resolver_match.url_name as url_name %}
+
+        <ul>
+            <li class="title">Hizmetlerimiz</li>
+            <li>
+                <a href="{% url 'ankara_dijital_baski' %}" class="{% if url_name == 'ankara_dijital_baski' %}active{% endif %}">
+                    Dijital Baskı
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'ankara_display_urunleri' %}" class="{% if url_name == 'ankara_display_urunleri' %}active{% endif %}">
+                    Display Ürünler
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'ankara_tabela_sistemleri' %}" class="{% if url_name == 'ankara_tabela_sistemleri' %}active{% endif %}">
+                    Tabela Sistemleri
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'ankara_promosyon_urunleri' %}" class="{% if url_name == 'ankara_promosyon_urunleri' %}active{% endif %}">
+                    Promosyon Ürünleri
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'ankara_matbaa_hizmetleri' %}" class="{% if url_name == 'ankara_matbaa_hizmetleri' %}active{% endif %}">
+                    Matbaa Hizmetleri
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'ankara_web_tasarimi' %}" class="{% if url_name == 'ankara_web_tasarimi' %}active{% endif %}">
+                    Ankara Web Tasarımı
+                    <i class="fi fi-rr-angle-small-right"></i>
+                </a>
+            </li>
+            
+        </ul>
+        {% endwith %}
+    </div>
+    
+</div>

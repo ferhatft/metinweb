@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block body %}
+<section class="banner blur">
+    <div class="sub">
+        <div class="container">
+            <h1>{{title}}</h1>
+            <ul>
+                <li>
+                    <a href="#"><i class="fi fi-rr-home"></i></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">{{title}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section class="subPage certificatesPage">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="subMenu">
+                    <ul>
+                        <li class="title">Hizmetlerimiz</li>
+                        {% for obj in projects  %}
+                        <li>
+                            <a href="{{obj.get_absolute_url}}" class="{% if request.path ==  obj.get_absolute_url   %} active {% endif %}">
+                                {{obj.title}}
+                                <i class="fi fi-rr-angle-small-right"></i>
+                            </a>
+                        </li>
+            
+                        {% endfor %}
+                    </ul>
+                </div>
+                
+            </div>
+            
+
+            <div class="col-lg-9 col-md-8">
+                <ul class="certificateList">
+
+
+
+                    {% if obj %}
+                    
+                    {% for img in obj.ProjectModelGaleri.all  %}
+                    
+                    <li class="certificate" onclick="onClick(this)" title="{{img.image.url}}">
+                        <a href="javascript:void(0);">
+                            <div class="imgContent">
+                                <img src="{{img.image.url}}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">İNCELE</div>
+                        </a>
+                    </li>
+
+                    
+                    {% endfor %}
+
+                    {% endif %}
+
+                    
+                    <li class="certificate">
+                        <a href="#">
+                            <div class="imgContent">
+                                <img src="{% static 'assets/image/article/folyo-baski.jpg' %}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">aaaa</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% include 'includes/bottom_box.html' %}
+    </div>
+</section>
+
+
+
+
+
+{% endblock  %}

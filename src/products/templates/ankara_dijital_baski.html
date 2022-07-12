@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+
+{% block body %}
+<section class="banner blur">
+    <div class="sub">
+        <div class="container">
+            <h1>{{title}}</h1>
+            <ul>
+                <li>
+                    <a href="#"><i class="fi fi-rr-home"></i></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">{{title}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="subPage certificatesPage">
+    <div class="container">
+        <div class="row">
+            {% include 'includes/left_menü.html' %}
+
+            <div class="col-lg-9 col-md-8">
+                <ul class="certificateList">
+
+                    {% for obj in projects  %}
+                    
+                    <li class="certificate">
+                        <a href="{{obj.get_absolute_url}}">
+                            <div class="imgContent">
+                                <img src="{{obj.mainimage.url}}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">İNCELE</div>
+                        </a>
+                    </li>
+                    {% endfor %}
+
+
+
+                    <li class="certificate">
+                        <a href="#">
+                            <div class="imgContent">
+                                <img src="{% static 'assets/image/article/folyo-baski.jpg' %}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">aaaa</div>
+                        </a>
+                    </li>
+                    <li class="certificate">
+                        <a href="#">
+                            <div class="imgContent">
+                                <img src="{% static 'assets/image/article/branda-baski.jpg' %}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">İNCELE</div>
+                        </a>
+                    </li>
+                    <li class="certificate">
+                        <a href="#">
+                            <div class="imgContent">
+                                <img src="{% static 'assets/image/article/dekota-foreks-baski.jpg' %}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">İNCELE</div>
+                        </a>
+                    </li>
+                    <li class="certificate">
+                        <a href="#">
+                            <div class="imgContent">
+                                <img src="{% static 'assets/image/article/duratrans.jpg' %}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">İNCELE</div>
+                        </a>
+                    </li>
+                    <li class="certificate">
+                        <a href="#">
+                            <div class="imgContent">
+                                <img src="{% static 'assets/image/article/etiket-sticker.jpg' %}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">İNCELE</div>
+                        </a>
+                    </li>
+                    
+                    <li class="certificate">
+                        <a href="#">
+                            <div class="imgContent">
+                                <img src="{% static 'assets/image/article/kanvas-tablo.jpg' %}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">İNCELE</div>
+                        </a>
+                    </li>
+                    <li class="certificate">
+                        <a href="#">
+                            <div class="imgContent">
+                                <img src="{% static 'assets/image/article/mesh-baski.jpg' %}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">İNCELE</div>
+                        </a>
+                    </li>
+                    <li class="certificate">
+                        <a href="#">
+                            <div class="imgContent">
+                                <img src="{% static 'assets/image/article/onewayvision.jpg' %}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">İNCELE</div>
+                        </a>
+                    </li>
+                    <li class="certificate">
+                        <a href="#">
+                            <div class="imgContent">
+                                <img src="{% static 'assets/image/article/onewayvision.jpg' %}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">İNCELE</div>
+                        </a>
+                    </li>
+
+                    <li class="certificate">
+                        <a href="#">
+                            <div class="imgContent">
+                                <img src="{% static 'assets/image/article/poster-afis.jpg' %}" alt="Sertifika">
+                            </div>
+                            <div class="button bg-green h-40">İNCELE</div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {% include 'includes/bottom_box.html' %}
+    </div>
+</section>
+
+
+{% endblock  %}

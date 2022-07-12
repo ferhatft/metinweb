@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{%load static%}
+{% load i18n %}
+{% block body  %}
+
+<section class="banner blur">
+    <div class="sub">
+        <div class="container">
+            <h1>TEKLİF ALIN</h1>
+            <ul>
+                <li>
+                    <a href="{{home_url}}"><i class="fi fi-rr-home"></i></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">Teklif Alın</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="subPage getaquotePage">
+    <div class="container">
+        <div class="mainFlex">
+            <form method="post">
+                {% csrf_token %}
+                <div class="formContent">
+                    <h3>HEMEN TEKLİF ALIN</h3>
+                    <p>Sizinle daha hızlı iletişim kurabilmek için lütfen Teklif formunu açık ve net şekilde doldurunuz.</p>
+                    <ul>
+                        <li>
+                            {{form.name}}
+                        </li>
+                        <li>
+                            {{form.email}}
+                        </li>
+                        <li>
+                            {{form.phone}}
+                        </li>
+                        <li>
+                            {{form.hizmet}}                     
+                        </li>
+                        <li>
+                            {{form.sehir}}
+                        </li>
+                        <li>
+                            {{form.ilce}}
+                        </li>
+                        <li>
+                            {{form.message}}
+                        </li>
+                    </ul>
+                    <div class="flexButton">
+                        <label class="agree">
+                            {{form.gizlilik_sözleşmesi}}
+                            Kabul Ediyorum, <a href="#" target="_blank">Gizlilik Politikası</a>
+                        </label>
+                        <button type="submit" class="button bg-green">GÖNDER</button>
+                    </div>
+                </div>
+                <div class="blueBox">
+                    <p class="title">
+                        Projelerimizde daima <br> <span>sizin isteklerinize</span> yer veriyoruz..
+                    </p>
+                    <p class="txt">
+                        KUAS olarak güçlü teknik kadromuz ile yenilikçi, dinamik, verimli, güvenilir bir takım
+                        Ruhu anlayışı sunarak, kalite ve müşteri memnuniyeti ilkelerinden taviz vermeden
+                        Optimal fiyatlarla hizmet sunmaktayız.
+                    </p>
+                </div>
+                <div class="greenBox">
+                    <p class="title">Bize Nereden Ulaştınız ?</p>
+                    {{form.u_yer}}
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+{% endblock body  %}

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="tr">
+<head>
+    <title>METİN</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="http://berkcengiz.com/assets/image/logo/favicon.ico" />
+    <link rel="apple-touch-icon" href="http://berkcengiz.com/assets/image/logo/favicon.ico">
+    <!-- SEO Meta Tags -->
+    <meta property="og:locale" content="en_EN" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Berk Cengiz" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@">
+    <meta name="twitter:creator" content="@">
+    <meta property="og:image" content="http://berkcengiz.com/assets/image/default_cover.jpg' %}" />
+    <meta name="twitter:image" content="http://berkcengiz.com/assets/image/default_cover.jpg' %}">
+    <meta property="og:url" content="http://www.berkcengiz.com" />
+    <meta property="og:description" content="Berk Cengiz is personal website." />
+    <meta property="og:title" content="Berk Cengiz is personal website." />
+    <meta name="description" content="Berk Cengiz is personal website." />
+    <meta name="keywords" content="b3rk,berk cengiz,b3 house,yiğit akü,petrol ofisi,freelance web tasarım,stok takip sistemi,web sitesi tasarımı" />
+    <meta name="twitter:title" content="Berk Cengiz is personal website.">
+    <meta name="twitter:description" content="Berk Cengiz is personal website.">
+    <!-- Bootstrap -->
+    <link href="{% static 'assets/plugins/bootstrap-5.0.1/css/bootstrap.min.css' %}" type="text/css" rel="stylesheet" />
+    <!-- SwiperJs -->
+    <link href="{% static 'assets/plugins/swiperjs-7.0.1/css/swiper-bundle.min.css' %}" type="text/css" rel="stylesheet" />
+    <!-- Select2 -->
+    <link href="{% static 'assets/plugins/select2/css/select2.min.css' %}" type="text/css" rel="stylesheet" />
+    <!-- Style -->
+    <link href="{% static 'assets/css/style.css' %}" type="text/css" rel="stylesheet" />
+    <!-- Uicons Regular -->
+    <link href="{% static 'assets/plugins/uicons/css/uicons-regular-rounded.css' %}" type="text/css" rel="stylesheet" />
+</head>
+
+{% url 'anasayfa' as home_url %}
+{% url 'galeri' as galeri %}
+{% url 'blog' as blog %}
+{% url 'iletisim:iletisim' as contact_url %}
+<body>
+
+    <nav>
+        <div class="container">
+            <section class="topBar">
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14.003">
+                                    <path d="M19.589-3.891a2.506,2.506,0,0,0-1.763-1.763C16.261-6.082,10-6.082,10-6.082s-6.26,0-7.825.412A2.556,2.556,0,0,0,.413-3.891,26.4,26.4,0,0,0,0,.92,26.3,26.3,0,0,0,.413,5.73,2.506,2.506,0,0,0,2.175,7.493C3.757,7.921,10,7.921,10,7.921s6.26,0,7.825-.412a2.506,2.506,0,0,0,1.763-1.763A26.41,26.41,0,0,0,20,.936a25.062,25.062,0,0,0-.412-4.827ZM8.007,3.918v-6l5.206,3Zm0,0" transform="translate(-0.001 6.082)"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M9.759-.018A10.124,10.124,0,0,0,6.6,19.59a.951.951,0,0,0,.869-.122.969.969,0,0,0,.407-.784v-5H6a.725.725,0,0,1-.715-.722V11.22A.725.725,0,0,1,6,10.5H7.871V7.988a3.8,3.8,0,0,1,1-3.021A3.728,3.728,0,0,1,11.8,3.789c.65,0,1.263.027,1.711.066a.716.716,0,0,1,.664.722v1.47a.725.725,0,0,1-.715.722h-.918c-1.275,0-1.51.627-1.51,1.55v2.2H13.09a.71.71,0,0,1,.534.247.723.723,0,0,1,.169.568l-.221,1.743a.718.718,0,0,1-.7.627H11.034v5.318a.977.977,0,0,0,.364.751.959.959,0,0,0,.807.19A10.124,10.124,0,0,0,9.759-.018Z" transform="translate(0.004 0.02)"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M965.212,2167h-6.024a6.991,6.991,0,0,0-6.988,6.985v6.023a6.991,6.991,0,0,0,6.988,6.987h6.024a6.99,6.99,0,0,0,6.988-6.986v-6.023a7.15,7.15,0,0,0-2.072-5.023A6.636,6.636,0,0,0,965.212,2167Zm1.285,10.038a4.519,4.519,0,0,1-2.566,4.276,4.223,4.223,0,0,1-4.783-.868,4.623,4.623,0,0,1-1.013-4.926,4.344,4.344,0,0,1,4.025-2.818,4.164,4.164,0,0,1,3.04,1.232,4.482,4.482,0,0,1,1.3,3.107Zm1.285-4.336a1.121,1.121,0,1,1,1.125-1.121,1.141,1.141,0,0,1-.333.806,1.058,1.058,0,0,1-.791.31Z" transform="translate(-952.2 -2166.996)"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16.241">
+                                    <path d="M20,59.364a8.193,8.193,0,0,1-2.356.645,4.12,4.12,0,0,0,1.806-2.268,8.271,8.271,0,0,1-2.612,1,4.106,4.106,0,0,0-6.991,3.742,11.648,11.648,0,0,1-8.454-4.29,4.108,4.108,0,0,0,1.27,5.473A4.1,4.1,0,0,1,.8,63.15V63.2a4.107,4.107,0,0,0,3.291,4.023,4.155,4.155,0,0,1-1.082.146,3.936,3.936,0,0,1-.774-.073,4.105,4.105,0,0,0,3.831,2.846,8.231,8.231,0,0,1-5.1,1.751A8.719,8.719,0,0,1,0,71.842a11.6,11.6,0,0,0,6.289,1.845A11.591,11.591,0,0,0,17.961,62.014l-.014-.531A8.193,8.193,0,0,0,20,59.364Z" transform="translate(0 -57.445)"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="infoMain">
+                    <div class="info">
+                        <a href="tel:">
+                            <span>Çağrı Hattı</span>
+                            444 44 44
+                        </a>
+                    </div>
+                    <div class="info">
+                        <a href="mailto:">
+                            <span>Talep ve İstek</span>
+                            info@domainname.com.tr
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="menu">
+                <a href="{{home_url}}" class="logo">
+                    <img src="{% static 'assets/image/logo/logo.png' %}" alt=" Logo">
+                </a>
+                <ul>
+                    <li>
+                        <a href="{% url 'ankara_dijital_baski' %}" class="{% if request.path == '/ankara-dijital-baski/' %}active{% endif %}"> PROJELER</a>
+                    </li>
+                    <li>
+                        <a href="{{blog}}" class="{% if request.path == blog %}active{% endif %}">BLOG</a>
+                    </li>
+                    <li>
+                        <a href="{{contact_url}}" class="{% if request.path == contact_url %}active{% endif %}">İLETİŞİM</a>
+                    </li>
+                    <div class="mobileContent">
+                        <a href="tel:">444 44 44</a>
+                        <a href="mailto:">info@domainname.com.tr</a>
+                    </div>
+                </ul>
+                <div class="bars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </section>
+        </div>
+    </nav>
+
+    
+{% block body %}
+
+
+
+
+{% endblock body %}
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-sm-4">
+                <div class="footerLogo">
+                    <img src="{% static 'assets/image/logo/logo.png' %}" alt="Logo">
+                </div>
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14.003">
+                                    <path d="M19.589-3.891a2.506,2.506,0,0,0-1.763-1.763C16.261-6.082,10-6.082,10-6.082s-6.26,0-7.825.412A2.556,2.556,0,0,0,.413-3.891,26.4,26.4,0,0,0,0,.92,26.3,26.3,0,0,0,.413,5.73,2.506,2.506,0,0,0,2.175,7.493C3.757,7.921,10,7.921,10,7.921s6.26,0,7.825-.412a2.506,2.506,0,0,0,1.763-1.763A26.41,26.41,0,0,0,20,.936a25.062,25.062,0,0,0-.412-4.827ZM8.007,3.918v-6l5.206,3Zm0,0" transform="translate(-0.001 6.082)"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M9.759-.018A10.124,10.124,0,0,0,6.6,19.59a.951.951,0,0,0,.869-.122.969.969,0,0,0,.407-.784v-5H6a.725.725,0,0,1-.715-.722V11.22A.725.725,0,0,1,6,10.5H7.871V7.988a3.8,3.8,0,0,1,1-3.021A3.728,3.728,0,0,1,11.8,3.789c.65,0,1.263.027,1.711.066a.716.716,0,0,1,.664.722v1.47a.725.725,0,0,1-.715.722h-.918c-1.275,0-1.51.627-1.51,1.55v2.2H13.09a.71.71,0,0,1,.534.247.723.723,0,0,1,.169.568l-.221,1.743a.718.718,0,0,1-.7.627H11.034v5.318a.977.977,0,0,0,.364.751.959.959,0,0,0,.807.19A10.124,10.124,0,0,0,9.759-.018Z" transform="translate(0.004 0.02)"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                    <path d="M965.212,2167h-6.024a6.991,6.991,0,0,0-6.988,6.985v6.023a6.991,6.991,0,0,0,6.988,6.987h6.024a6.99,6.99,0,0,0,6.988-6.986v-6.023a7.15,7.15,0,0,0-2.072-5.023A6.636,6.636,0,0,0,965.212,2167Zm1.285,10.038a4.519,4.519,0,0,1-2.566,4.276,4.223,4.223,0,0,1-4.783-.868,4.623,4.623,0,0,1-1.013-4.926,4.344,4.344,0,0,1,4.025-2.818,4.164,4.164,0,0,1,3.04,1.232,4.482,4.482,0,0,1,1.3,3.107Zm1.285-4.336a1.121,1.121,0,1,1,1.125-1.121,1.141,1.141,0,0,1-.333.806,1.058,1.058,0,0,1-.791.31Z" transform="translate(-952.2 -2166.996)"></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16.241">
+                                    <path d="M20,59.364a8.193,8.193,0,0,1-2.356.645,4.12,4.12,0,0,0,1.806-2.268,8.271,8.271,0,0,1-2.612,1,4.106,4.106,0,0,0-6.991,3.742,11.648,11.648,0,0,1-8.454-4.29,4.108,4.108,0,0,0,1.27,5.473A4.1,4.1,0,0,1,.8,63.15V63.2a4.107,4.107,0,0,0,3.291,4.023,4.155,4.155,0,0,1-1.082.146,3.936,3.936,0,0,1-.774-.073,4.105,4.105,0,0,0,3.831,2.846,8.231,8.231,0,0,1-5.1,1.751A8.719,8.719,0,0,1,0,71.842a11.6,11.6,0,0,0,6.289,1.845A11.591,11.591,0,0,0,17.961,62.014l-.014-.531A8.193,8.193,0,0,0,20,59.364Z" transform="translate(0 -57.445)"></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="copyright">Copyright © 2021 METİN</p>
+            </div>
+            <div class="col-lg-3 col-sm-2">
+                <ul class="fastMenu">
+                    <li class="title">Menü</li>
+                    <li>
+                        <a href="#">Anasayfa</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog</a>
+                    </li>
+                    <li>
+                        <a href="#">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-sm-2">
+                <ul class="fastMenu">
+                    <li class="title">Hzlı Erişim</li>
+
+                    <li>
+                        <a href="{% url 'ankara_dijital_baski' %}" class="{% if url_name == 'ankara_dijital_baski' %}active{% endif %}">
+                            Dijital Baskı
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'ankara_display_urunleri' %}" class="{% if url_name == 'ankara_display_urunleri' %}active{% endif %}">
+                            Display Ürünler
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'ankara_tabela_sistemleri' %}" class="{% if url_name == 'ankara_tabela_sistemleri' %}active{% endif %}">
+                            Tabela Sistemleri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'ankara_promosyon_urunleri' %}" class="{% if url_name == 'ankara_promosyon_urunleri' %}active{% endif %}">
+                            Promosyon Ürünleri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'ankara_matbaa_hizmetleri' %}" class="{% if url_name == 'ankara_matbaa_hizmetleri' %}active{% endif %}">
+                            Matbaa Hizmetleri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{% url 'ankara_web_tasarimi' %}" class="{% if url_name == 'ankara_web_tasarimi' %}active{% endif %}">
+                            Ankara Web Tasarımı
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-3 col-sm-4">
+                <div class="footerInfo">
+                    <p class="title">İletişim</p>
+                    <p class="adress">
+                        <span>A.</span>
+                        Lara Caddesi, Kemal sokak. No 67 D:12
+                    </p>
+                    <a href="#" class="call">
+                        <span>Hemen Arayın</span>
+                        444 44 44
+                    </a>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+    <!-- Popup -->
+    <section class="popupMain">
+        <div class="popupClose">
+            <i class="fi-rr-cross"></i>
+        </div>
+        <div class="popupContent">
+            <div class="embed">
+                <img id="img-src" src="" alt="">
+            </div>
+        </div>
+    </section>
+
+
+    <!-- JQuery -->
+    <script src="{% static 'assets/plugins/jquery-3.6.0/js/jquery-3.6.0.min.js' %}"></script>
+    <!-- Bootstrap -->
+    <script src="{% static 'assets/plugins/bootstrap-5.0.1/js/bootstrap.min.js' %}"></script>
+    <!-- SwiperJs -->
+    <script src="{% static 'assets/plugins/swiperjs-7.0.1/js/swiper-bundle.min.js' %}"></script>
+    <!-- Select2 -->
+    <script src="{% static 'assets/plugins/select2/js/select2.min.js' %}"></script>
+    <!-- Lazy Loading -->
+    <script src="{% static 'assets/plugins/lazy-loading/js/lazy.js' %}"></script>
+    <!-- MainJs -->
+    <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+</html>

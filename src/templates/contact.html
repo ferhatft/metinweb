@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{%load static%}
+{% load i18n %}
+{% block body  %}
+
+<section class="banner blur">
+    <div class="sub">
+        <div class="container">
+            <h1>İLETİŞİM</h1>
+            <ul>
+                <li>
+                    <a href="{{home_url}}"><i class="fi fi-rr-home"></i></a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">İletişim</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="subPage contactPage">
+    <div class="container">
+        <div class="sectionTitle">
+            <h2>Bizimle <span>İletişime Geçin</span></h2>
+        </div>
+        <div class="contactMain">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="contactInfo blur">
+                        <div class="content">
+                            <h3>KUAS Home A.Ş.</h3>
+                            <ul class="info">
+                                <li>
+                                    <span>A.</span>
+                                    Lara Caddesi, Kemal sokak. No. 67 D:12 <br> İstanbul / Türkiye
+                                </li>
+                                <li>
+                                    <span>M.</span>
+                                    <a href="#">info@kuas.com.tr</a>
+                                </li>
+                                <li>
+                                    <span>T.</span>
+                                    <a href="#">444 44 44</a>
+                                </li>
+                            </ul>
+                            <div class="social">
+                                <p>Bizi Takip Edin</p>
+                                <ul>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 14.003">
+                                                <path d="M19.589-3.891a2.506,2.506,0,0,0-1.763-1.763C16.261-6.082,10-6.082,10-6.082s-6.26,0-7.825.412A2.556,2.556,0,0,0,.413-3.891,26.4,26.4,0,0,0,0,.92,26.3,26.3,0,0,0,.413,5.73,2.506,2.506,0,0,0,2.175,7.493C3.757,7.921,10,7.921,10,7.921s6.26,0,7.825-.412a2.506,2.506,0,0,0,1.763-1.763A26.41,26.41,0,0,0,20,.936a25.062,25.062,0,0,0-.412-4.827ZM8.007,3.918v-6l5.206,3Zm0,0" transform="translate(-0.001 6.082)"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path d="M9.759-.018A10.124,10.124,0,0,0,6.6,19.59a.951.951,0,0,0,.869-.122.969.969,0,0,0,.407-.784v-5H6a.725.725,0,0,1-.715-.722V11.22A.725.725,0,0,1,6,10.5H7.871V7.988a3.8,3.8,0,0,1,1-3.021A3.728,3.728,0,0,1,11.8,3.789c.65,0,1.263.027,1.711.066a.716.716,0,0,1,.664.722v1.47a.725.725,0,0,1-.715.722h-.918c-1.275,0-1.51.627-1.51,1.55v2.2H13.09a.71.71,0,0,1,.534.247.723.723,0,0,1,.169.568l-.221,1.743a.718.718,0,0,1-.7.627H11.034v5.318a.977.977,0,0,0,.364.751.959.959,0,0,0,.807.19A10.124,10.124,0,0,0,9.759-.018Z" transform="translate(0.004 0.02)"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                <path d="M965.212,2167h-6.024a6.991,6.991,0,0,0-6.988,6.985v6.023a6.991,6.991,0,0,0,6.988,6.987h6.024a6.99,6.99,0,0,0,6.988-6.986v-6.023a7.15,7.15,0,0,0-2.072-5.023A6.636,6.636,0,0,0,965.212,2167Zm1.285,10.038a4.519,4.519,0,0,1-2.566,4.276,4.223,4.223,0,0,1-4.783-.868,4.623,4.623,0,0,1-1.013-4.926,4.344,4.344,0,0,1,4.025-2.818,4.164,4.164,0,0,1,3.04,1.232,4.482,4.482,0,0,1,1.3,3.107Zm1.285-4.336a1.121,1.121,0,1,1,1.125-1.121,1.141,1.141,0,0,1-.333.806,1.058,1.058,0,0,1-.791.31Z" transform="translate(-952.2 -2166.996)"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" target="_blank">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 16.241">
+                                                <path d="M20,59.364a8.193,8.193,0,0,1-2.356.645,4.12,4.12,0,0,0,1.806-2.268,8.271,8.271,0,0,1-2.612,1,4.106,4.106,0,0,0-6.991,3.742,11.648,11.648,0,0,1-8.454-4.29,4.108,4.108,0,0,0,1.27,5.473A4.1,4.1,0,0,1,.8,63.15V63.2a4.107,4.107,0,0,0,3.291,4.023,4.155,4.155,0,0,1-1.082.146,3.936,3.936,0,0,1-.774-.073,4.105,4.105,0,0,0,3.831,2.846,8.231,8.231,0,0,1-5.1,1.751A8.719,8.719,0,0,1,0,71.842a11.6,11.6,0,0,0,6.289,1.845A11.591,11.591,0,0,0,17.961,62.014l-.014-.531A8.193,8.193,0,0,0,20,59.364Z" transform="translate(0 -57.445)"></path>
+                                            </svg>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="contactForm">
+                        <form method="post">
+                            {% csrf_token %}
+                            <h3>İletişim Formu</h3>
+                            <p>Size daha hızlı ulaşabilmemiz için iletişim formunu lütfen eksiksiz doldurunuz.</p>
+                            <ul>
+                                <li>
+                                    {{form.name}}
+                                </li>
+                                <li>
+                                    {{form.email}}
+                                </li>
+                                <li>
+                                    {{form.phone}}
+                                </li>
+                                <li>
+                                    {{form.subject}}                     
+                                </li>
+                                <li>
+                                    {{form.message}}
+                                </li>
+                            </ul>
+                            <div class="flexButton">
+                                <label class="agree">
+                                    {{form.gizlilik_sözleşmesi}}
+                                    Kabul Ediyorum, <a href="#" target="_blank">Gizlilik Politikası</a>
+                                </label>
+                                <button type="submit" class="button bg-green">GÖNDER</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock body  %}

@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block body %}
+
+
+
+<section class="banner blur">
+  <div class="sub">
+      <div class="container">
+          <h1>BLOG</h1>
+          <ul>
+              <li>
+                  <a href="{{home_url}}"><i class="fi fi-rr-home"></i></a>
+              </li>
+              <li>
+                  <a href="javascript:void(0);">Blog</a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</section>
+
+<section class="subPage blogPage">
+  <div class="container">
+      <div class="sectionTitle">
+          <h2>
+              <span>Bizden</span> Yazılar
+          </h2>
+      </div>
+      <div class="row">
+        
+        
+        {% if blogs %}
+        
+        {% for obj in blogs  %}
+
+        
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <a href="{{obj.get_absolute_url}}">
+              <div class="blogBox blur">
+                  <div class="imgContent imgBorder">
+                      <img data-src="{% if obj.image %}{{obj.image.url}}{% endif %}" alt="{{obj.title}}" class="lazy">
+                  </div>
+                  <div class="content">
+                      <p class="date">{{obj.created_date|default_if_none:""}}</p>
+                      <p class="title">{{obj.title|default_if_none:""}}</p>
+                      <div class="button bg-green h-40">DETAY</div>
+                  </div>
+              </div>
+          </a>
+        </div>
+        {% endfor %}
+                
+        {% endif %}
+        
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <a href="#">
+                  <div class="blogBox blur">
+                      <div class="imgContent imgBorder">
+                          <img data-src="assets/image/article/home_about.png" alt="Blog Image" class="lazy">
+                      </div>
+                      <div class="content">
+                          <p class="date">09.02.2021</p>
+                          <p class="title">Lorem ipsum dolor sit amet consectetur.</p>
+                          <div class="button bg-green h-40">DETAY</div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <a href="#">
+                  <div class="blogBox blur">
+                      <div class="imgContent imgBorder">
+                          <img data-src="assets/image/article/home_about.png" alt="Blog Image" class="lazy">
+                      </div>
+                      <div class="content">
+                          <p class="date">09.02.2021</p>
+                          <p class="title">Lorem ipsum dolor sit amet consectetur.</p>
+                          <div class="button bg-green h-40">DETAY</div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <a href="#">
+                  <div class="blogBox blur">
+                      <div class="imgContent imgBorder">
+                          <img data-src="assets/image/article/home_about.png" alt="Blog Image" class="lazy">
+                      </div>
+                      <div class="content">
+                          <p class="date">09.02.2021</p>
+                          <p class="title">Lorem ipsum dolor sit amet consectetur.</p>
+                          <div class="button bg-green h-40">DETAY</div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <a href="#">
+                  <div class="blogBox blur">
+                      <div class="imgContent imgBorder">
+                          <img data-src="assets/image/article/home_about.png" alt="Blog Image" class="lazy">
+                      </div>
+                      <div class="content">
+                          <p class="date">09.02.2021</p>
+                          <p class="title">Lorem ipsum dolor sit amet consectetur.</p>
+                          <div class="button bg-green h-40">DETAY</div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <a href="#">
+                  <div class="blogBox blur">
+                      <div class="imgContent imgBorder">
+                          <img data-src="assets/image/article/home_about.png" alt="Blog Image" class="lazy">
+                      </div>
+                      <div class="content">
+                          <p class="date">09.02.2021</p>
+                          <p class="title">Lorem ipsum dolor sit amet consectetur.</p>
+                          <div class="button bg-green h-40">DETAY</div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <a href="#">
+                  <div class="blogBox blur">
+                      <div class="imgContent imgBorder">
+                          <img data-src="assets/image/article/home_about.png" alt="Blog Image" class="lazy">
+                      </div>
+                      <div class="content">
+                          <p class="date">09.02.2021</p>
+                          <p class="title">Lorem ipsum dolor sit amet consectetur.</p>
+                          <div class="button bg-green h-40">DETAY</div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6">
+              <a href="#">
+                  <div class="blogBox blur">
+                      <div class="imgContent imgBorder">
+                          <img data-src="assets/image/article/home_about.png" alt="Blog Image" class="lazy">
+                      </div>
+                      <div class="content">
+                          <p class="date">09.02.2021</p>
+                          <p class="title">Lorem ipsum dolor sit amet consectetur.</p>
+                          <div class="button bg-green h-40">DETAY</div>
+                      </div>
+                  </div>
+              </a>
+          </div>
+      </div>
+  </div>
+</section>
+{% endblock body %}

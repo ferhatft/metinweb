@@ -1,0 +1,249 @@
+.homeProjects{
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: url("../image/header/bg-1.jpg");
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center !important;
+    @media screen and (max-width: $maxWidth_sm){
+        height: auto;
+        padding: 100px 0;
+    }
+    &::after{
+        content: "PROJELER";
+        position: absolute;
+        left: -25px;
+        top: 0;
+        font-size: $size_20;
+        color: $white_100;
+        font-family: $m_semibold;
+        letter-spacing: 5px;
+        transform: rotate(-90deg);
+        height: 100%;
+        display: flex;
+        align-items: center;
+        @media screen and (max-width: $maxWidth_md){
+            display: none;
+        }
+    }
+    .row{
+        @media screen and (max-width: $maxWidth_sm){
+            flex-direction: column-reverse;
+        }
+    }
+    .tabContent{
+        display: none;
+        .projectContent{
+            padding: 0 0 0 50px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            @media screen and (max-width: $maxWidth_md){
+                padding: 0;
+            }
+            @media screen and (max-width: $maxWidth_sm){
+                padding: 0;
+                flex-direction: column;
+            }
+            .swiper{
+                width: 50%;
+                height: 350px;
+                border-radius: $radius_8;
+                padding: 10px;
+                @media screen and (max-width: $maxWidth_sm){
+                    width: 100%;
+                }
+                .swiper-wrapper{
+                    .swiper-slide{
+                        .imgContent{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: $radius_8;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius: $radius_8;
+                            }
+                        }
+                    }
+                }
+            }
+            .content{
+                width: 50%;
+                padding: 0 0 0 50px;
+                position: relative;
+                @media screen and (max-width: $maxWidth_md){
+                    padding: 0 0 0 25px;
+                }
+                @media screen and (max-width: $maxWidth_sm){
+                    width: 100%;
+                    padding: 50px 0 0 0;
+                }
+                &::after{
+                    content: "KUAS";
+                    position: absolute;
+                    right: 25px;
+                    top: -50px;
+                    color: $white_100;
+                    font-size: 100px;
+                    font-family: $m_regular;
+                    letter-spacing: 5px;
+                    line-height: 75px;
+                    opacity: .1;
+                    @media screen and (max-width: $maxWidth_sm){
+                        right: -25px;
+                        top: auto;
+                        bottom: -102px;
+                    }
+                }
+                p{
+                    color: $white_100;
+                    &.title{
+                        font-family: $p_semibold;
+                        font-size: $size_18;
+                    }
+                    &.comment{
+                        font-family: $p_light;
+                        font-size: $size_12;
+                        opacity: .8;
+                        margin: 15px 0 25px 0;
+                        @media screen and (max-width: $maxWidth_sm){
+                            text-align: justify;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .otherProjects{
+        position: relative;
+        &::after, &::before{
+            content: "";
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            left: 40%;
+            z-index: 1;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+            background-position: center !important;
+            @media screen and (max-width: $maxWidth_sm){
+                display: none;
+            }
+        }
+        &::after{
+            top: -50px;
+            background: url("../image/icons/angle-up.svg");
+        }
+        &::before{
+            bottom: -50px;
+            background: url("../image/icons/angle-down.svg");
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            max-height: 350px;
+            overflow: hidden;
+            overflow-y: scroll;
+            position: relative;
+            border-radius: $radius_8;
+            @media screen and (max-width: $maxWidth_sm){
+                flex-direction: row;
+                overflow-y: unset;
+                overflow-x: scroll;
+                max-height: none;
+                margin: 0 0 40px 0;
+                padding: 0 0 10px 0;
+            }
+            &::-webkit-scrollbar-track{
+                background: $white_100;
+            }
+            &::-webkit-scrollbar-thumb{
+                background: $green_100;
+            }
+            &::-webkit-scrollbar{
+                width: 0;
+                @media screen and (max-width: $maxWidth_sm){
+                    width: 0;
+                    height: 5px;
+                }
+            }
+            li{
+                &:not(:last-child){
+                    a{
+                        margin: 0 0 25px 0;
+                        @media screen and (max-width: $maxWidth_sm){
+                            margin: 0 25px 0 0;
+                        }
+                    }
+                }
+                a{
+                    width: 100%;
+                    height: 100px;
+                    position: relative;
+                    overflow: hidden;
+                    display: block;
+                    border-radius: $radius_8;
+                    @media screen and (max-width: $maxWidth_sm){
+                        width: 200px;
+                    }
+                    &:hover{
+                        &::after{
+                            opacity: .6;
+                        }
+                    }
+                    &::after{
+                        content: "";
+                        width: 100%;
+                        height: 100%;
+                        background: $blue_100;
+                        opacity: .8;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        transition: all .2s ease-in-out;
+                        border-radius: $radius_8;
+                    }
+                    &.active{
+                        &::after{
+                            opacity: .6;
+                        }
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: $radius_8;
+                    }
+                    .content{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 1;
+                        padding: 10px;
+                        em{
+                            font-size: $size_20;
+                            color: $white_100;
+                            font-family: $m_regular;
+                            opacity: .5;
+                            font-style: normal;
+                        }
+                        p{
+                            font-size: $size_12;
+                            color: $white_100;
+                            font-family: $p_regular;
+                            height: 18px;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
