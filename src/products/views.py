@@ -92,3 +92,13 @@ def productdetail(request,slug,proj_type):
     }
     return render(request, "project_galeri.html", context)
 
+
+def projects_tek(request):
+
+    context = {
+    }
+    return render(request, "ankara_web_tasarimi.html", context)
+
+    
+
+
