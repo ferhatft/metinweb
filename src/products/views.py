@@ -92,26 +92,3 @@ def productdetail(request,slug,proj_type):
     }
     return render(request, "project_galeri.html", context)
 
-
-def projects_tek(request):
-
-    context = {
-    }
-    return render(request, "products_main.html", context)
-
-    
-
-
-
-def projects_cift(request):
-    projects = ProductModel.objects.all()
-    ratedprojects  = ProductModel.objects.order_by('-rating')
-
-    context = {
-        'projects':projects,
-        'ratedprojects':ratedprojects,
-        # 'galeri':galeri,
-
-    }
-    return render(request, "projects.html", context)
-
