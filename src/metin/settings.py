@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-_aihiz2i^uex^+apcei=w8-@ht7jm&1^6j_1cia%srd#pb*rd-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['metinweb.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1',]
 
 
 # Application definition
@@ -169,26 +169,13 @@ EMAIL_USE_TLS = True
 
 EMAIL_HOST_USER = 'tugrul.tf51@gmail.com'
 
-EMAIL_HOST_PASSWORD = 'ccmzmserrhvyidqx'
+EMAIL_HOST_PASSWORD = ''
 
 DEFAULT_TO_EMAIL = 'fferhattugrul@gmail.com'
 
 DEFAULT_FROM_EMAIL = 'tugrul.tf51@gmail.com'
 
 #------- live e-mail 
-
-
-# EMAIL_HOST_USER = 'toolzon.art@gmail.com'
-
-# EMAIL_HOST_PASSWORD = 'wgiozoxtjnbikbfm'
-
-# DEFAULT_TO_EMAIL = 'toolzon.art@gmail.com'
-
-# DEFAULT_FROM_EMAIL = 'toolzon.art@gmail.com'
-
-
-
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
