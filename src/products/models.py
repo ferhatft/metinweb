@@ -12,6 +12,7 @@ PROJTYPE = (
     ('ankara-tabela-sistemleri', 'ankara-tabela-sistemleri'),
     ('ankara-promosyon-ürünleri', 'ankara-promosyon-ürünleri'),
     ('ankara-matbaa-hizmetleri', 'ankara-matbaa-hizmetleri'),
+    ('ankara-uv-basi', 'ankara-uv-basi'),
     ('ankara-ankara-web-tasarimi', 'ankara-web-tasarimi'),
 )
 

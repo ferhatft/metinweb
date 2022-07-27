@@ -4,7 +4,7 @@
 {% get_current_language as LANGUAGE_CODE %}
 <html lang="tr">
 <head>
-    <title>METİN</title>
+    <title>Reklam, Dijital Baskı Merkezi, Baskılı Ürünler &#8902; Dijital Baskı &amp; Açık Hava Reklamcılığı</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,7 +22,7 @@
     <meta name="twitter:image" content="default_cover.jpg' %}">
     <meta property="og:description" content="null" />
     <meta property="og:title" content="null" />
-    <meta name="description" content="null" />
+    <meta name="description" content="Ankara Dijital Baskı | İç Mekan Baskı | Dış Mekan Baskı | Latex Baskı | Baskı Sonrası Uygulama | Vitray Reklam" />
     <meta name="keywords" content="null" />
     <meta name="twitter:title" content="null">
     <meta name="twitter:description" content="null">
@@ -44,6 +44,7 @@
 {% url 'iletisim:iletisim' as contact_url %}
 <body>
 
+    
     <nav>
         <div class="container">
             <section class="topBar">
@@ -100,7 +101,7 @@
                 </a>
                 <ul>
                     <li>
-                        <a href="{% url 'ankara_dijital_baski' %}" class="{% if request.path == '/ankara-dijital-baski/' %}active{% endif %}"> HİZMETLERİMİZ</a>
+                        <a href="{% url 'ankara_dijital_baski' %}" class="{% if request.path == '/ankara-dijital-baski/' %}active{% endif %}"> PROJELER</a>
                     </li>
                     <li>
                         <a href="{{blog}}" class="{% if request.path == blog %}active{% endif %}">BLOG</a>
@@ -122,6 +123,36 @@
         </div>
     </nav>
 
+
+    <div id="mybutton">
+         <a  class="feedback" href="https://wa.me/+905513841906" target="_blank"> <img src="{% static 'assets/icons/whatsapp-svgrepo-com.svg' %}" alt="">
+        </a>
+    </div>
+
+    <style>
+
+    .feedback {
+        background-color : transparent;
+        color: white;
+        padding: 20px;
+        border-radius: 50%;
+        transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+      
+      #mybutton {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 10;
+      }
+
+      #mybutton:hover .feedback {
+        padding: 22px;
+
+      }
+    
+    
+    </style>
     
 {% block body %}
 
@@ -169,7 +200,7 @@
                         </li>
                     </ul>
                 </div>
-                <p class="copyright">Copyright © 2021 METİN</p>
+                <p class="copyright">Copyright © 2021 erdemartreklamtabela.com</p>
             </div>
             <div class="col-lg-3 col-sm-2">
                 <ul class="fastMenu">
@@ -228,9 +259,9 @@
                         <span>A.</span>
                         Lara Caddesi, Kemal sokak. No 67 D:12
                     </p>
-                    <a href="#" class="call">
+                    <a href="tel:+90 551 384 19 06" class="call">
                         <span>Hemen Arayın</span>
-                        444 44 44
+                        +90 551 384 19 06
                     </a>
                 </div>
             </div>
@@ -238,6 +269,8 @@
         </div>
     </div>
 </footer>
+
+
     
     <!-- Popup -->
     <section class="popupMain">

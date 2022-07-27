@@ -27,7 +27,7 @@
             <div class="col-lg-3">
                 <div class="subMenu">
                     <ul>
-                        <li class="title">Hizmetlerimiz</li>
+                        <li class="title">{{obj.title}}</li>
                         {% for obj in projects  %}
                         <li>
                             <a href="{{obj.get_absolute_url}}" class="{% if request.path ==  obj.get_absolute_url   %} active {% endif %}">
@@ -68,11 +68,25 @@
                 </ul>
             </div>
         </div>
+
+        <div class="row">
+      
+            <div class="col bottomBox">
+                <div class="detailContent">
+                   {{obj.decription|safe }}
+    
+                </div>
+            </div>
+        </div>
+
         {% include 'includes/bottom_box.html' %}
     </div>
 </section>
 
 
+<div class="container">
+    
+</div>
 
 
 

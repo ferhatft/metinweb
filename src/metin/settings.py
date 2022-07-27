@@ -27,8 +27,7 @@ SECRET_KEY = 'django-insecure-_aihiz2i^uex^+apcei=w8-@ht7jm&1^6j_1cia%srd#pb*rd-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['104.248.205.114','kuastinyhouse.com','www.kuastinyhouse.com','127.0.0.1']
-
+ALLOWED_HOSTS = ['metinweb.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -244,6 +243,11 @@ CKEDITOR_CONFIGS = {
                 "name": 'comment',
                 "element": 'p',
                 "attributes": {'class': 'comment'},
+            },
+            {
+                "name": 'title',
+                "element": 'p',
+                "attributes": {'class': 'content'},
             },
           
         ],

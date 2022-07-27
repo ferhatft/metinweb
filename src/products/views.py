@@ -16,6 +16,17 @@ def ankara_dijital_baski(request):
 
     }
     return render(request, "ankara_dijital_baski.html", context)
+
+def ankara_uv_baski(request):
+    projects = ProductModel.objects.filter(proj_type='ankara-uv-basi')
+    
+    context = {
+        'title':'Ankara Uv Baskı',
+
+        'projects':projects,
+
+    }
+    return render(request, "ankara_uv_baski.html", context)
 def ankara_display_urunleri(request):
     projects = ProductModel.objects.filter(proj_type='ankara-display-ürünler')
     
@@ -97,7 +108,7 @@ def projects_tek(request):
 
     context = {
     }
-    return render(request, "ankara_web_tasarimi.html", context)
+    return render(request, "index.html", context)
 
     
 
